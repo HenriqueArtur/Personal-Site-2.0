@@ -1,0 +1,94 @@
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.navigation {
+  position: relative;
+  width: 50px;
+  height: 200px;
+  border-radius: 35px;
+
+  ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      position: relative;
+      list-style: none;
+      display: flex;
+      width: 50px;
+      height: 50px;
+      z-index: 1;
+
+      a {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+
+        .icon {
+          position: relative;
+          display: block;
+          line-height: 75px;
+          text-align: center;
+        }
+
+        .title {
+          position: absolute;
+          top: 50%;
+          left: 90px;
+          width: 120px;
+          background: #29263c;
+          transform: translateY(-50%);
+          padding: 5px 10px;
+          border-radius: 6px;
+          transition: .5s;
+
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+
+    li:hover a .title {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-25%) translateY(-50%);
+    }
+
+    li a .title::before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: #29263c;
+      left: -10px;
+      top: 50%;
+      transform: rotate(45deg) translateY(-50%);
+      border-radius: 2px;
+    }
+
+    li.active a .icon {
+      color: #61ffca;
+    }
+
+    .indicator {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 50px;
+      height: 40px;
+      background: #15141b;
+      border-radius: 30% 0% 00% 30%;
+    }
+  }
+}
