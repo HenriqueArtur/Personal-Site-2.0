@@ -30,7 +30,7 @@ export default function Title(): JSX.Element {
   }, [title]);
 
   return (
-    <h1 className="mx-[60px] text-4xl flex">
+    <h1 className="text-4xl flex">
       <p>//</p>
       <Typewriter
         onInit={animate}
