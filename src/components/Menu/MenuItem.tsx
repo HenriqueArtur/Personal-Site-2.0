@@ -19,7 +19,7 @@ export default function MenuItem(props: MenuItemProps): JSX.Element {
 
   return (
     <li className={`list ${isActive ? 'active' : ''}`}>
-      <a href="#" className="text-primary hover:text-tertiary" onClick={(_event) => activeThisItem(id)}>
+      <a href="#" className="font-secondary font-light text-primary hover:text-tertiary" onClick={(_event) => activeThisItem(id)}>
         <span className="icon">{icon}</span>
         <span className="title">{title}</span>
       </a>
