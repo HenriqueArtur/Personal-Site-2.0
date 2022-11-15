@@ -15,6 +15,10 @@ module.exports = {
         foregrounds: "#edecee",
         comments: "#6d6d6d",
         backgrounds: "#15141b",
+      },
+      fontFamily: {
+        primary: ['Fira Code', 'ui-monospace'],
+        secondary: ['Roboto', 'ui-sans-serif'],
       }
     }
   },
