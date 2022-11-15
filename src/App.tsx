@@ -1,12 +1,14 @@
 import Menu from "./components/Menu";
+import Profile from "./components/Profile";
 import Title from "./components/Title";
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <Profile />
       <Title />
       <Menu />
-    </div>
+    </>
   );
 }
 
