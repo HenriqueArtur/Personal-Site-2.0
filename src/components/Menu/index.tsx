@@ -1,12 +1,14 @@
 // @ts-ignore
 import { Home, FaceWink, Catalog, LocationHeart } from '@carbon/icons-react';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { PageContext } from '../../contexts/PageContext';
+import { Title } from '../Title';
 import MenuItem from './MenuItem';
 
 import './style.scss'
 
-const startMenuItens = [
+const startMenuItens: Item[] = [
   {
     id: 0,
     title: "Hello World",
@@ -33,18 +35,31 @@ const startMenuItens = [
   }
 ];
 
+interface Item {
+  id: number;
+  title: Title;
+  icon: JSX.Element;
+  isActive: boolean;
+}
+
 export default function Menu(): JSX.Element {
   const INITIAL_POS = 5;
   const UNITY_IN_PIXES = 50;
+
   const [menuItens, setMenuItens] = useState(startMenuItens);
   const [indicatorPosition, setIndicatorPosition] = useState(INITIAL_POS);
 
+  const { updateTitle } = useContext(PageContext);
+
   function handlerNewActive(id: number) {
-    const newMenuItens =
+    const newMenuItens: Item[] =
       menuItens.map((i) => ({ ...i, isActive: i.id == id ? true : false }));
 
-    setIndicatorPosition(INITIAL_POS + id * UNITY_IN_PIXES);
+    setIndicatorPosition(INITIAL_POS + (id * UNITY_IN_PIXES));
     setMenuItens(newMenuItens);
+
+    const currentItem = menuItens.find((i) => i.id == id) as Item;
+    updateTitle(currentItem.title);
   };
 
   return (
