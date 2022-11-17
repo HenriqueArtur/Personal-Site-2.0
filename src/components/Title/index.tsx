@@ -30,12 +30,12 @@ export default function Title(): JSX.Element {
   }, [title]);
 
   return (
-    <h1 className="text-4xl flex">
-      <p>//</p>
+    <h2 className="text-2xl flex">
+      <span>//</span>
       <Typewriter
         onInit={animate}
         options={{ cursor: ".", delay: 35 }}
       />
-    </h1>
+    </h2>
   );
 };
