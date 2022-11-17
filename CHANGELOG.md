@@ -3,8 +3,14 @@
 <!-- Link e.g.: -->
 <!-- ([SHA_RESUME](https://github.com/HenriqueArtur/Personal-Site-2.0/commit/COMMIT_SHA)) -->
 
-## 🔖 v0.3.0 (2022-11-15)
+## 🔖 v0.4.0 (2022-11-16)
+**✨ Features**
+- Component: Profile ([ebe16c3](https://github.com/HenriqueArtur/Personal-Site-2.0/commit/ebe16c3d6098a7b6962ea43660b6d2c55f5e0090))
 
+** ♻️ Refactoring**
+- Change styles and Tags in Title component ([bce7c5d](https://github.com/HenriqueArtur/Personal-Site-2.0/commit/bce7c5d8123141d8d071f382051049012ee82e23))
+
+## 🔖 v0.3.0 (2022-11-15)
 **🚧 WIP**
 - Profile component
 
