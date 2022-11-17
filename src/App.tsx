@@ -5,8 +5,8 @@ import Title from "./components/Title";
 function App() {
   return (
     <>
-      <Profile />
       <Title />
+      <Profile />
       <Menu />
     </>
   );
